@@ -21,9 +21,10 @@ class wordpress {
     command => "/usr/bin/mysql -u root -p${wordpress_db_rootpwd} --execute='create database ${$wordpress_db_name}'",
   }
 
+  # Create the Wordpress database user
   exec { 'create-user':
     unless  => "/usr/bin/mysql -u ${wordpress_db_user} -p${wordpress_db_pasword}",
-    command => "/usr/bin/mysql -u root -p${wordpress_db_rootpwd} --execute=\"GRANT ALL PRIVILEGES ON ${wordpress_db_name}.* TO '${wordpress_db_user}'@'localhost' IDENTIFIED BY '${wordpress_db_password}'\"",
+    command => "/usr/bin/mysql -u root -p${wordpress_db_rootpwd} --execute=\"GRANT ALL PRIVILEGES ON ${$wordpress_db_name}.* TO '${$wordpress_db_user}'@'localhost' IDENTIFIED BY '${$wordpress_db_password}'\"",
   }
 
   # Get a new copy of the latest wordpress release
