@@ -4,3 +4,4 @@ wordpress-db-user,wordpress
 wordpress-db-password,pleasechangemetoo
 wordpress-db-root-password,yupchangemetoo
 wordpress-server-names,wordpress.example.com
+wordpress_dir,/opt

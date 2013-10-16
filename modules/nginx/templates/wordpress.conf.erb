@@ -2,7 +2,7 @@ server {
         listen 80;
         server_name <%= server_names %>;
         access_log /var/log/nginx/wordpress.log;
-        root <%= wordpress_dir %>;
+        root <%= wordpress_dir %>/wordpress;
 
         index index.php;
         real_ip_header X-Forwarded-For;
