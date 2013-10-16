@@ -11,6 +11,11 @@ class php5 {
     ]:
     ensure => present,
   }
+  
+  service { 'php5-fpm':
+    ensure  => running,
+    require => Package['php5-fpm'],
+  }
 
 }
 
