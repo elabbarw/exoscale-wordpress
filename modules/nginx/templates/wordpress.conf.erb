@@ -14,7 +14,7 @@ server {
 	}
 
         location ~ \.php$ {
-                fastcgi_pass wordpress;
+                fastcgi_pass localhost:9000;
                 include fastcgi_params;
         }
 }
