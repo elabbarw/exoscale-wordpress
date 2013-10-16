@@ -52,7 +52,7 @@ class wordpress {
   }
 
   exec { 'load-db':
-    command => "/usr/bin/mysql -u ${wordpress_db_user} -p${wordpress_db_password} ${wordpress_db_name} < /tmp/wordpress-db.sql && touch ${wordpress_dir}/wordpress/db-created",
+    command => "/usr/bin/mysql -u root -p${wordpress_db_rootpwd} ${wordpress_db_name} < /tmp/wordpress-db.sql && touch ${wordpress_dir}/wordpress/db-created",
     creates => "${wordpress_dir}/wordpress/db-created"
   }
 
