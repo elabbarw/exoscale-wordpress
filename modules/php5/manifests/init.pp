@@ -22,6 +22,7 @@ class php5::wordpress {
 
   file { '/etc/php5/fpm/conf.d/wordpress.conf':
     content => template('php5/wordpress.conf.erb'),
-    require => Package['php5-fpm']
+    require => Package['php5-fpm'],
+    notify => Service['php5-fpm']
   }
 }
