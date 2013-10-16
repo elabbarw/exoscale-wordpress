@@ -11,7 +11,7 @@ bootstrap a fully fonctionnal Wordpress install which IS NOT a clone.
 * Userdata will be filled with a script
 * Script will be called on first boot by cloud-init
 * A puppet repository will be pulled on the instance
-* The script will launch Puppet and apply the manifest
+* The script will launch Puppet and apply the manifest and eventually after PHP, NGINX and MYSQL installation pull a fresh copy of Wordpress and install it.
 
 Keep it mind that it is possible to go much further in automation deployment.
 
@@ -36,7 +36,7 @@ In the User Data tab, input the script below:
     #
 
     mv /etc/puppet /etc/puppet.orig
-    git clone https://github.com/retrack/exoscale-wordpress.git /etc/puppet
+    git clone https://github.com/exoscale/exoscale-wordpress.git /etc/puppet
 
     #
     # Run puppet.
@@ -48,6 +48,10 @@ In the User Data tab, input the script below:
 
 Point your browser to your instance public IP address and you should be asked for an admin email and password. 
 
+### Advanced usage
+
+For anything other than testing, we recommend forking this repository and modify the config/common.csv file with your details.
+Of course also alter the git clone argument passed to your instance via user-data to match your personal repository.
 
 ## Modify:
 
