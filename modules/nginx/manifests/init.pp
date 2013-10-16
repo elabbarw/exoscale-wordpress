@@ -39,8 +39,8 @@ class nginx {
 class nginx::wordpress {
   include wordpress
   include nginx
-
-  $wordpress_dir = "${wordpress::wordpress_dir}/wordpress"
+  
+  $wordpress_dir = extlookup('wordpress-dir', '/opt')
   $server_names = extlookup("wordpress-server-names", "wordpress")
 
   file { '/etc/nginx/sites-enabled/wordpress.conf':
