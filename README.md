@@ -19,7 +19,7 @@ Keep it mind that it is possible to go much further in automation deployment.
 
 ### Start an instance
 
-Launch a new Ubuntu instance with the service offering you wish. Insert it in a security group or with firewall rules which enable port 80/http.
+Launch a new Ubuntu 12.04 LTS instance with the service offering you wish. Insert it in a security group or with firewall rules which enable port 80/http.
 
 ### User Data with Cloud-init
 
@@ -61,7 +61,7 @@ Do not forget to replace the URL in the userdata script.
 ## TODO
 
 * Salt wp-config.php
-* Better mysql DB security
+* ~~Better mysql DB security~~
 
 ## Credits:
 
