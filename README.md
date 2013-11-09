@@ -46,7 +46,8 @@ In the User Data tab, input the script below:
 
 ### Start using your fresh  Wordpres
 
-Point your browser to your instance public IP address and you should be asked for an admin email and password. 
+Point your browser to your instance public IP address and you should be asked for an admin email and password. If not the default user and password is admin/wordpress
+
 
 ### Advanced usage
 
