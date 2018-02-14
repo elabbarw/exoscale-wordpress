@@ -1,7 +1,7 @@
 exoscale-wordpress
 ==================
 
-A wordpress environment to deploy on [exoscale](http://www.exoscale.ch/open-cloud/compute/) or any cloud-init compatible cloud with plain vanilla Ubuntu instances.
+A wordpress environment to deploy on [exoscale](https://www.exoscale.com/compute/) or any cloud-init compatible cloud with plain vanilla Ubuntu instances.
 
 ## Principles:
 
